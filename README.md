@@ -56,7 +56,8 @@ The system aims to reduce diagnostic time and improve clinical decision-making i
 
 ## Project Status
 
-**Current Status**: Published \
+**Current Status**: Published 
+
 **Publication**: https://www.sciencedirect.com/science/article/pii/S2352914825000930
 
 ---
