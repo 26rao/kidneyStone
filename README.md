@@ -1,23 +1,71 @@
-Automated Kidney Stone Detection and Severity Grading via Deep Learning on Radiographs
-Project Overview
-(Currently, the code for this project is restricted from being uploaded.)
-This project implements a two-stage deep learning pipeline for automated kidney stone detection and severity estimation from radiographs (CT or ultrasound scans). The system localizes kidney stones using YOLOv8 and predicts severity using a ResNet-18-based regression model, providing a comprehensive diagnostic aid for clinicians.
+# Automated Kidney Stone Detection and Severity Grading using Deep Learning on Radiographs
 
-Methodology
-2.1 Overview
-The pipeline consists of two stages:
-Localization Stage 
-Detects and localizes kidney stones in radiographs
-(Further details cannot be provided as the project is under review.)
+A two-stage deep learning pipeline for **automated detection, localization, and severity grading** of kidney stones from radiographic images (CT / Ultrasound). Designed to assist radiologists and urologists in faster and more consistent diagnosis.
 
-Dataset
-Radiographs (CT or ultrasound)  kidney stone images.
-Images are preprocessed for normalization, resizing, and augmentation to improve model robustness
+---
 
-Dependencies
-Python 3.x
-PyTorch
-OpenCV
-NumPy
-Matplotlib
-YOLOv8 (Ultralytics library)
+## Overview
+
+Kidney stones (nephrolithiasis) are a common and painful condition affecting millions worldwide. Manual detection and severity assessment on radiographs can be time-consuming and subject to inter-observer variability.  
+
+This project proposes a **two-stage deep learning system** that:
+1. **Localizes** kidney stones with high accuracy using object detection.
+2. **Grades severity** (size, number, location, obstruction risk) using a regression/classification approach.
+
+The system aims to reduce diagnostic time and improve clinical decision-making in urology and radiology departments.
+
+---
+
+## Methodology
+
+### Two-Stage Pipeline
+
+**Stage 1: Localization (Object Detection)**
+- Uses **YOLOv8** (Ultralytics) to detect and localize kidney stones in radiographs.
+- Outputs bounding boxes with confidence scores.
+
+**Stage 2: Severity Grading**
+- Crops the detected regions and feeds them into a **ResNet-18** based model.
+- Performs regression for stone size and multi-class classification for severity levels.
+
+### Key Features
+- Robust preprocessing pipeline (normalization, resizing, augmentation)
+- State-of-the-art object detection with YOLOv8
+- Transfer learning on ResNet-18 for severity estimation
+- End-to-end inference pipeline for clinical usability
+
+---
+
+## Dataset
+
+- Publicly available kidney stone radiographic datasets (CT and Ultrasound)
+- Images include varied stone sizes, locations, and imaging conditions
+- Preprocessing steps: intensity normalization, contrast enhancement, geometric augmentations
+
+---
+
+## Technologies & Dependencies
+
+- **Language**: Python 3.x
+- **Deep Learning**: PyTorch, Ultralytics YOLOv8
+- **Computer Vision**: OpenCV
+- **Scientific Computing**: NumPy, Matplotlib, Pandas
+- **Others**: Albumentations (for augmentation), scikit-learn
+
+---
+
+## Project Status
+
+**Current Status**: Published
+**Publication**: https://www.sciencedirect.com/science/article/pii/S2352914825000930
+
+---
+
+## License
+
+This project is for research purposes only. 
+
+---
+
+**Contact / Citation**
+If you use this work in your research, please cite:
